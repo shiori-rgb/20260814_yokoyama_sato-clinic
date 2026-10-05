@@ -79,9 +79,9 @@
       return el.textContent.replace(/\s/g, '').includes('地域の皆様に安心してご来院いただけるよう、スタッフ一同、');
     });
     if (!target) return;
-    target.innerHTML = '地域の皆様に安心してご来院いただけるよう、スタッフ一同、<br>誠心誠意対応いたします。<br>それぞれの専門性と温かさを活かし、皆様の健康を<br>支えるパートナー<br>としてお力になれるよう努めてまいります。';
+    target.innerHTML = '地域の皆様に安心してご来院いただけるよう、スタッフ一同、<br>誠心誠意対応いたします。<br>それぞれの専門性と温かさを活かし、<br>皆様の健康を支えるパートナーとして<br>お力になれるよう努めてまいります。';
     target.style.marginTop = '2em';
-    target.style.marginBottom = '2em';
+    target.style.marginBottom = '3em';
     var heading = target.parentElement && target.parentElement.querySelector('h2, h3');
     if (heading) heading.style.marginBottom = '2em';
     var image = target.parentElement && target.parentElement.querySelector('img');
