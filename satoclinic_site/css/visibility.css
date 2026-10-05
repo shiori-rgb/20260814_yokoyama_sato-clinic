@@ -1,0 +1,17 @@
+/* PC版とSP版の文言・カードを完全に分離するための表示制御 */
+.mobile-only,
+.mobile-copy,
+.mobile-about,
+.mobile-medical,
+.consult-section { display: none; }
+
+@media (max-width: 700px) {
+  .desktop-only,
+  .desktop-copy { display: none !important; }
+
+  .mobile-only { display: block; }
+  .mobile-copy { display: grid; }
+  .mobile-about { display: grid; }
+  .mobile-medical { display: grid; }
+  .consult-section { display: block; }
+}
