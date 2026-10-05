@@ -74,18 +74,32 @@
   <footer class="site-footer"><img src="assets/Logo/logo.png" alt="佐藤医院"><p>〒123-4567 東京都台東区上野0-0-0<br>TEL：00-0000-0000</p><small>© Sato Clinic</small></footer>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    if (!window.matchMedia('(max-width: 767px)').matches) return;
+    if (!window.matchMedia('(max-width: 767px)').matches) {
+      var yamamoto = Array.from(document.querySelectorAll('body *')).find(function (el) {
+        return el.children.length === 0 && el.textContent.trim() === '山本花';
+      });
+      if (yamamoto) {
+        var yamamotoCard = yamamoto.closest('article, li, .staff-card, .staff-item') || yamamoto.parentElement.parentElement;
+        var yamamotoImage = yamamotoCard && yamamotoCard.querySelector('img');
+        if (yamamotoImage) {
+          yamamotoImage.style.display = 'block';
+          yamamotoImage.style.marginLeft = 'auto';
+          yamamotoImage.style.marginRight = 'auto';
+        }
+      }
+      return;
+    }
     var target = Array.from(document.querySelectorAll('p, div')).find(function (el) {
       return el.textContent.replace(/\s/g, '').includes('地域の皆様に安心してご来院いただけるよう、スタッフ一同、');
     });
     if (!target) return;
     target.innerHTML = '地域の皆様に安心してご来院いただけるよう、スタッフ一同、<br>誠心誠意対応いたします。<br>それぞれの専門性と温かさを活かし、<br>皆様の健康を支えるパートナーとして<br>お力になれるよう努めてまいります。';
     target.style.marginTop = '2em';
-    target.style.marginBottom = '3em';
+    target.style.marginBottom = '0';
     var heading = target.parentElement && target.parentElement.querySelector('h2, h3');
     if (heading) heading.style.marginBottom = '2em';
     var image = target.parentElement && target.parentElement.querySelector('img');
-    if (image) image.style.marginTop = '2em';
+    if (image) image.style.marginTop = '0';
     var name = Array.from(document.querySelectorAll('body *')).find(function (el) {
       return el.children.length === 0 && el.textContent.trim() === '佐藤太郎';
     });
@@ -94,7 +108,7 @@
       if (card) {
         card.style.transform = '';
         card.style.marginTop = '0';
-        card.style.transform = 'translateY(-2em)';
+        card.style.transform = '';
       }
     }
   });
