@@ -1,0 +1,48 @@
+/* ===================== 共通 ===================== */
+:root{--bg:#f3f8f7;--paper:#fff;--ink:#30413f;--muted:#708481;--line:#c9dcda;--accent:#286d68;--accent-light:#e4f1ef;--max:1240px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans JP",sans-serif;font-size:15px;line-height:1.9;letter-spacing:.03em}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* ===================== ヘッダー ===================== */
+.site-header{height:70px;background:#fff;border-bottom:1px solid #dce8e6;position:sticky;top:0;z-index:2}.header-inner{max-width:var(--max);height:100%;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:0 26px}.brand img{width:150px;height:auto}.site-header nav{display:flex;gap:21px;font-size:13px;color:var(--accent);font-weight:500}.site-header nav a:hover{color:#82a9a5}
+/* ===================== メインビジュアル ===================== */
+main{max-width:var(--max);margin:0 auto;background:var(--paper);box-shadow:0 0 25px rgba(38,86,79,.04)}.hero{height:355px;position:relative;overflow:hidden}.hero>img{width:100%;height:100%;object-fit:cover;object-position:center}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(21,65,61,.47),transparent 58%)}.hero-copy{position:absolute;z-index:1;left:48px;top:104px;color:#fff}.hero-copy p{font-size:31px;margin:0;font-weight:500;text-shadow:0 1px 4px rgba(0,0,0,.2)}.hero-copy span{font-size:13px;letter-spacing:.15em}
+.card,.section{padding:54px 72px}.hours{padding-top:34px;padding-bottom:30px;background:#eff8f6}.hours-table{width:100%;border-collapse:collapse;font-size:13px;text-align:center;background:#fff}.hours-table th,.hours-table td{border:1px solid #d8e5e2;height:42px;padding:5px 7px}.hours-table thead th{background:#f8fbfa;color:var(--muted);font-weight:500}.hours-table tbody th{font-weight:400;color:var(--muted);text-align:left;white-space:nowrap}.hours-table td{color:#278f88;font-size:18px}.table-note{color:var(--muted);font-size:11px;margin:9px 0 0;text-align:center}
+/* ===================== 共通セクション ===================== */
+.section{background:#fff}.section h2{color:var(--accent);font-size:22px;font-weight:500;text-align:center;letter-spacing:.18em;margin:0 0 34px;line-height:1.4}.section h2:after{content:"";display:block;width:76px;border-bottom:1px solid #77a7a2;margin:13px auto 0}.more-link{display:block;color:#357b76;text-align:center;font-size:12px;margin-top:24px}.news{padding-top:43px;padding-bottom:39px}.news h2{background:var(--accent);color:#fff;width:100%;border-radius:22px;padding:7px 0;font-size:16px;margin-bottom:25px}.news h2:after{display:none}.news-list{list-style:none;margin:0;padding:0;border-top:1px solid #d8e3e1}.news-list li{display:grid;grid-template-columns:108px 1fr auto;gap:8px;border-bottom:1px solid #d8e3e1;padding:8px 4px;font-size:12px;align-items:center}.news-list time{color:#8b9a97}.news-list a{font-weight:500}.news-list span{color:#43938d;font-size:11px}.greeting{padding-top:38px}.greeting-body{display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start}.greeting-body img{height:250px;width:220px;object-fit:cover;border-radius:18px}.greeting-body p{margin:0 0 13px;font-size:13px}.signature{text-align:right;font-size:11px!important;color:var(--muted)}
+/* ===================== 診療内容 ===================== */
+.medical{background:#f7fbfa}.medical-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px 28px}.medical-grid article img{width:100%;height:190px;object-fit:cover;border-radius:13px}.medical-grid h3,.staff h3{color:var(--accent);font-size:15px;font-weight:500;margin:10px 0 4px}.medical-grid p,.staff p{font-size:12px;line-height:1.8;margin:0}.about{padding-top:58px}.about-banner{position:relative;overflow:hidden;border-radius:20px;min-height:220px;background:var(--accent-light)}.about-banner img{width:100%;height:220px;object-fit:cover;opacity:.33}.about-banner>div{position:absolute;inset:0;padding:40px 55px;color:#315855;text-shadow:0 1px 1px #fff;font-size:13px}.about-banner p{max-width:500px;margin:0 0 13px}
+/* ===================== スタッフ紹介 ===================== */
+.staff{background:#fff}.lead{text-align:center;font-size:12px;margin:-12px 0 30px}.staff-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px 40px}.staff-grid article{text-align:center}.staff-grid img{width:150px;height:150px;object-fit:cover;border-radius:50%;margin:0 auto 10px}.staff-grid .staff-lead{grid-column:1/-1;display:flex;text-align:left;align-items:center;gap:28px}.staff-grid .staff-lead img{margin:0;width:180px;height:180px}.staff-grid .staff-lead h3{margin-top:0}
+/* ===================== アクセス・フッター ===================== */
+.access{background:#f7fbfa}.map{width:76%;height:310px;object-fit:cover;margin:0 auto;border-radius:10px}.address{list-style:none;margin:18px auto 28px;width:76%;padding:0;font-size:12px;line-height:2}.contact{background:#fff;border:1px dashed #bfd4d0;padding:18px 24px;text-align:center;width:76%;margin:auto}.contact h3{font-size:16px;margin:0 0 10px;color:var(--accent)}.contact p{font-size:12px;margin:2px}.final-hours{padding-top:40px}.subjects{text-align:center;padding-top:26px;padding-bottom:52px}.subjects h2{margin-bottom:22px}.subjects p{font-size:12px;margin:3px}.site-footer{background:#286d68;color:#fff;text-align:center;padding:35px 20px 18px;font-size:11px}.site-footer img{width:145px;margin:0 auto 13px;filter:brightness(0) invert(1)}.site-footer p{margin:0 0 20px}.site-footer small{font-size:10px;opacity:.8}
+@media(max-width:720px){body{font-size:14px}.site-header{height:auto;position:static}.header-inner{display:block;padding:13px 16px}.brand img{width:136px}.site-header nav{gap:10px;justify-content:space-between;font-size:10px;margin-top:9px}.hero{height:310px}.hero-copy{left:25px;top:95px}.hero-copy p{font-size:23px}.card,.section{padding-left:25px;padding-right:25px}.greeting-body{grid-template-columns:145px 1fr;gap:16px}.greeting-body img{width:145px;height:175px}.greeting-body p{font-size:11px;line-height:1.7}.medical-grid{gap:25px 15px}.medical-grid article img{height:135px}.medical-grid p,.staff p{font-size:10px}.about-banner>div{padding:28px 25px;font-size:11px}.map,.address,.contact{width:100%}.map{height:230px}.staff-grid{gap:22px 16px}.staff-grid .staff-lead{gap:18px}.staff-grid .staff-lead img{width:130px;height:130px}.staff-grid img{width:110px;height:110px}.news-list li{grid-template-columns:76px 1fr;line-height:1.45}.news-list span{grid-column:2}.hours-table{font-size:10px}.hours-table th,.hours-table td{height:34px;padding:3px}.hours-table td{font-size:14px}}
+/* 当院についての見出しとリンクは画像上に配置 */
+.about-copy h2{color:var(--accent);font-size:22px;font-weight:500;text-align:center;letter-spacing:.18em;margin:0 0 28px;line-height:1.4}
+.about-copy h2:after{content:"";display:block;width:76px;border-bottom:1px solid #77a7a2;margin:13px auto 0}
+.about-copy .more-link{color:var(--accent);font-weight:500;margin-top:22px}
+/* スタッフ紹介：参考画像に合わせた配置 */
+.staff-grid article:not(.staff-lead){text-align:left}
+.staff-grid article:not(.staff-lead) img{margin-left:auto;margin-right:auto}
+.staff-grid article:last-child{grid-column:1 / -1;width:50%;margin:0 auto}
+.staff-grid .staff-lead{width:75%;margin-left:auto;margin-right:auto}
+.staff-grid article:last-child img{margin-left:auto;margin-right:auto}
+.staff-grid article p{margin-bottom:8px}
+
+@media(max-width:720px){
+  .staff-grid .staff-lead{width:100%}
+  .staff-grid article:last-child{width:70%}
+}
+.news .more-link{text-align:right;padding-right:4px}
+.about-banner{min-height:260px;margin-top:-20px;margin-bottom:-20px}
+.about-banner img{height:260px}
+@media(max-width:720px){.about-banner{min-height:250px;margin-top:-15px;margin-bottom:-15px}.about-banner img{height:250px}}
+.about-banner{min-height:280px;margin-top:-30px;margin-bottom:-30px}
+.about-banner img{height:280px}
+.news .more-link{color:#43938d}
+@media(max-width:720px){.about-banner{min-height:270px;margin-top:-25px;margin-bottom:-25px}.about-banner img{height:270px}}
+.greeting-body img{object-position:calc(50% - 60px) center}
+.medical-grid article img{object-position:center calc(50% + 50px)}
+.staff-grid .staff-lead > img{transform:translateX(-60px)}
+.staff-grid article:nth-child(2) > img{transform:translateX(-60px)}
+.staff-grid article:nth-child(4) > img{transform:translateX(60px)}
+.site-footer img{filter:brightness(0) invert(1) opacity(.78)}
+.subjects p{font-weight:600}
